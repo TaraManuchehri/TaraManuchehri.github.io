@@ -26,18 +26,6 @@
         }
 
         body 
-        {<!-- نویگیشن -->
-<nav class="cyber-nav">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">نام شما</a>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link">خانه</a>
-            <a href="about.html" class="nav-link">درباره من</a>
-            <a href="projects.html" class="nav-link">پروژه‌ها</a>
-            <a href="contact.html" class="nav-link">تماس</a>
-        </div>
-    </div>
-</nav>
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             direction: rtl;
             text-align: right;
@@ -352,69 +340,7 @@
             
             .cyber-card {
                 padding: 20px;
-            }
-        }
-    </style>
-    .cyber-nav {
-    background: rgba(17, 17, 17, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: var(--neon-blue);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    width: 0;
-    height: 2px;
-    background: var(--neon-blue);
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-</head>
-<body>
+ }
     <div class="container">
         <!-- هدر -->
         <header class="cyber-header floating">
@@ -535,6 +461,18 @@
         });
     </script>
 </body>
+           <!-- نویگیشن -->
+<nav class="cyber-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">نام شما</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">خانه</a>
+            <a href="about.html" class="nav-link">درباره من</a>
+            <a href="projects.html" class="nav-link">پروژه‌ها</a>
+            <a href="contact.html" class="nav-link">تماس</a>
+        </div>
+    </div>
+</nav> 
 </html>
 <a href="https://instagram.com/_sunmnuchri_" 
    target="_blank"
