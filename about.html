@@ -3,47 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>درباره من</title>
+    <title>درباره من - نام شما</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* استفاده از استایل‌های مشابه صفحه اصلی */
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-purple: #b967ff;
+            --neon-pink: #ff2a6d;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             direction: rtl;
             text-align: right;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 20px;
+            line-height: 1.7;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 40px 20px;
         }
-        .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
+
+        /* نویگیشن */
+        .cyber-nav {
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
             text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-blue);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--neon-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* کارت‌ها */
+        .cyber-card {
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cyber-card h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: var(--neon-blue);
+            border-right: 4px solid var(--neon-purple);
+            padding-right: 15px;
+        }
+
+        .cyber-card h3 {
+            color: var(--neon-purple);
+            margin: 20px 0 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 243, 255, 0.4);
         }
     </style>
 </head>
 <body>
+    <!-- نویگیشن -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">نام شما</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">خانه</a>
+                <a href="about.html" class="nav-link">درباره من</a>
+                <a href="projects.html" class="nav-link">پروژه‌ها</a>
+                <a href="contact.html" class="nav-link">تماس</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <a href="index.html" class="back-button">← بازگشت به صفحه اصلی</a>
-        
-        <h1>درباره من</h1>
-        <p>این صفحه درباره من است. می‌توانید اطلاعات بیشتری در اینجا قرار دهید.</p>
-        
-        <h2>سوابق تحصیلی</h2>
-        <p>توضیحات درباره تحصیلات...</p>
-        
-        <h2>تجربیات کاری</h2>
-        <p>توضیحات درباره کارهای قبلی...</p>
+        <!-- محتوای صفحه -->
+        <div class="cyber-card">
+            <h2><i class="fas fa-user"></i> درباره من</h2>
+            <p>من یک توسعه‌دهنده فول‌استک با ۵ سال تجربه در زمینه طراحی و توسعه وب اپلیکیشن‌های مدرن هستم. تخصص اصلی من در زمینه React, Node.js و طراحی رابط کاربری است.</p>
+            
+            <h3>سوابق تحصیلی</h3>
+            <p>کارشناسی ارشد مهندسی نرم‌افزار از دانشگاه تهران</p>
+            
+            <h3>مهارت‌ها</h3>
+            <ul>
+                <li>توسعه Front-end با React و Vue.js</li>
+                <li>توسعه Back-end با Node.js و Python</li>
+                <li>طراحی UI/UX</li>
+                <li>مدیریت پایگاه داده</li>
+            </ul>
+            
+            <a href="contact.html" class="btn">تماس با من</a>
+        </div>
     </div>
 </body>
 </html>
