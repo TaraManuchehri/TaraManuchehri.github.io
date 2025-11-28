@@ -25,7 +25,7 @@
             box-sizing: border-box;
         }
 
-        body 
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             direction: rtl;
             text-align: right;
@@ -50,6 +50,66 @@
                 radial-gradient(circle at 80% 20%, rgba(185, 103, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(255, 42, 109, 0.05) 0%, transparent 50%);
             z-index: -1;
+        }
+
+        /* استایل منو */
+        .cyber-nav {
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-blue);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--neon-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
         }
 
         .container {
@@ -340,12 +400,37 @@
             
             .cyber-card {
                 padding: 20px;
- }
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-logo {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- منوی نویگیشن -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">نام شما</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">خانه</a>
+                <a href="about.html" class="nav-link">درباره من</a>
+                <a href="projects.html" class="nav-link">پروژه‌ها</a>
+                <a href="contact.html" class="nav-link">تماس</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <!-- هدر -->
         <header class="cyber-header floating">
             <!-- عکس پروفایل -->
-            <img src="C58515F1-3A24-4E0C-AA0A-0D1CDC0606CC.jpeg" alt="عکس پروفایل" class="profile-img">
+            <img src="profile.jpg" alt="عکس پروفایل" class="profile-img">
             <h1>نام و نام خانوادگی</h1>
             <p class="cyber-title">توسعه‌دهنده فول‌استک | طراح UI/UX</p>
         </header>
@@ -461,111 +546,4 @@
         });
     </script>
 </body>
-           <!-- نویگیشن -->
-<nav class="cyber-nav">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">نام شما</a>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link">خانه</a>
-            <a href="about.html" class="nav-link">درباره من</a>
-            <a href="projects.html" class="nav-link">پروژه‌ها</a>
-            <a href="contact.html" class="nav-link">تماس</a>
-        </div>
-    </div>
-</nav> 
 </html>
-<a href="https://instagram.com/_sunmnuchri_" 
-   target="_blank"
-   style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 25px; background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737); color: white; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s ease;">
-    <i class="fab fa-instagram" style="font-size: 1.2em;"></i>
-    اینستاگرام من
-</a>
-<div class="cyber-card">
-    <h2><i class="fas fa-tools"></i> تکنولوژی‌ها و ابزارها</h2>
-    <div class="cyber-list">
-        <div class="list-item">
-            <span class="list-icon">⚡</span>
-            <div class="list-content">
-                <h4>Front-end</h4>
-                <p>React, Vue.js, TypeScript, HTML5, CSS3</p>
-            </div>
-        </div>
-        <div class="list-item">
-            <span class="list-icon">🔧</span>
-            <div class="list-content">
-                <h4>Back-end</h4>
-                <p>Node.js, Python, Express, MongoDB</p>
-            </div>
-        </div>
-        <div class="list-item">
-            <span class="list-icon">🎨</span>
-            <div class="list-content">
-                <h4>Design</h4>
-                <p>Figma, Adobe XD, Photoshop, Illustrator</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-.cyber-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.list-item {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.list-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--neon-blue), var(--neon-purple));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.list-item:hover {
-    transform: translateX(-10px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.2);
-}
-
-.list-item:hover::before {
-    opacity: 1;
-}
-
-.list-icon {
-    font-size: 2em;
-    margin-left: 20px;
-    filter: drop-shadow(0 0 10px var(--neon-blue));
-}
-
-.list-content {
-    flex: 1;
-}
-
-.list-content h4 {
-    color: var(--neon-blue);
-    margin-bottom: 5px;
-    font-size: 1.2em;
-}
-
-.list-content p {
-    color: var(--text-secondary);
-    margin: 0;
-}
-</style>
