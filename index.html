@@ -472,3 +472,92 @@
     <i class="fab fa-instagram" style="font-size: 1.2em;"></i>
     اینستاگرام من
 </a>
+<div class="cyber-card">
+    <h2><i class="fas fa-tools"></i> تکنولوژی‌ها و ابزارها</h2>
+    <div class="cyber-list">
+        <div class="list-item">
+            <span class="list-icon">⚡</span>
+            <div class="list-content">
+                <h4>Front-end</h4>
+                <p>React, Vue.js, TypeScript, HTML5, CSS3</p>
+            </div>
+        </div>
+        <div class="list-item">
+            <span class="list-icon">🔧</span>
+            <div class="list-content">
+                <h4>Back-end</h4>
+                <p>Node.js, Python, Express, MongoDB</p>
+            </div>
+        </div>
+        <div class="list-item">
+            <span class="list-icon">🎨</span>
+            <div class="list-content">
+                <h4>Design</h4>
+                <p>Figma, Adobe XD, Photoshop, Illustrator</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.cyber-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--neon-blue), var(--neon-purple));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list-item:hover {
+    transform: translateX(-10px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.2);
+}
+
+.list-item:hover::before {
+    opacity: 1;
+}
+
+.list-icon {
+    font-size: 2em;
+    margin-left: 20px;
+    filter: drop-shadow(0 0 10px var(--neon-blue));
+}
+
+.list-content {
+    flex: 1;
+}
+
+.list-content h4 {
+    color: var(--neon-blue);
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.list-content p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+</style>
